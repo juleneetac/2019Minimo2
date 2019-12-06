@@ -1,0 +1,2 @@
+include ':Proyectentrega-debug'
+include ':app', ':Proyectentrega-debug'

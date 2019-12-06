@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="app_name">Proyectentrega</string>
+    <string name="game_view_content_description">Game view</string>
+    <string name="title_activity_back_button">BackButton</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <style name="BaseUnityTheme" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen">
+</style>
+    <style name="UnityThemeSelector" parent="BaseUnityTheme">
+	<item name="android:windowBackground">@android:color/black</item>
+</style>
+    <style name="UnityThemeSelector.Translucent" parent="@style/UnityThemeSelector">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+</style>
+</resources>

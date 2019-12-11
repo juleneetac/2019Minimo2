@@ -3,6 +3,9 @@ package com.example.approguelike2d;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.Company.primerjuego.UnityPlayerActivity;
+
+
 public class GameActivity extends UnityPlayerActivity {
     @Override
     protected void onCreate(Bundle arg0) {

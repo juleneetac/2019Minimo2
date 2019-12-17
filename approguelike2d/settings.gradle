@@ -1,2 +1,0 @@
-include ':app', ':Proyectentrega-debug'
-rootProject.name='approguelike2d'

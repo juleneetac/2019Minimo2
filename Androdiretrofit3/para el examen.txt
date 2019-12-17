@@ -1,0 +1,19 @@
+Si el contsrantllayout no va bajar la version en build.gradle a:
+implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+
+
+en el AndoridMnifest poner:
+<uses-permission android:name="android.permission.INTERNET" />
+
+
+en el AndoridMnifest hacer que la scplash activity sea la primera:
+<activity android:name=".MainActivity"></activity>
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+Tener cuidado con la version de reciclerView

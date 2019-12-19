@@ -20,7 +20,6 @@ public class Login extends AppCompatActivity {
     private SharedPreferences.Editor editor;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,24 +28,38 @@ public class Login extends AppCompatActivity {
         etUser = (EditText) findViewById(R.id.editUsername);
         etPass = (EditText) findViewById(R.id.editPassword);
 
-        preferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
-        editor = preferences.edit();
+        preferences =  Login.this.getPreferences(Context.MODE_PRIVATE);
+
+        String user = preferences.getString("user","incorrect");
+        String password = preferences.getString("dsamola","incorrect");
+
+        if(user.equals("user")&&password.equals("dsamola"))
+        {
+            Intent intent = new Intent(Login.this, ListActivity.class);
+            startActivity(intent);
+        }
     }
 
-    public void guardarLog(View view){
-            String user = etUser.getText().toString();
-            String password = etPass.getText().toString();
 
-            editor.putString("userP", user);
-            editor.putString("passP", password);
 
+    public void logbuttonfunction(final View view) {
+        String user = etUser.getText().toString();
+        String password = etPass.getText().toString();
+
+        if (user.equals("user") && password.equals("dsamola")) {
+
+            SharedPreferences sharedPref = Login.this.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString(etUser.getText().toString(), etUser.getText().toString());
+            editor.putString(etPass.getText().toString(), etPass.getText().toString());
             editor.commit();
 
-            Intent intent = new Intent(this, ListActivity.class);
+            Intent intent = new Intent(view.getContext(), ListActivity.class);
             startActivity(intent);
         }
 
     }
+}
 
 
 
